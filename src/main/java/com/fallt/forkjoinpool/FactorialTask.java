@@ -12,11 +12,11 @@ public class FactorialTask extends RecursiveTask<Integer> {
 
     @Override
     protected Integer compute() {
-        if (number == 1) {
+        if (number == 1 || number == 0) {
             return 1;
         }
-        if (number < 1) {
-            throw new IllegalArgumentException("The number can`t be less then 1");
+        if (number < 0) {
+            throw new IllegalArgumentException("The number can`t be less then 0");
         }
         FactorialTask newTask = new FactorialTask(number - 1);
         newTask.fork();
