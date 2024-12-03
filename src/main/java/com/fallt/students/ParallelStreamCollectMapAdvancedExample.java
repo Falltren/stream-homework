@@ -23,11 +23,5 @@ public class ParallelStreamCollectMapAdvancedExample {
                 ));
 
         System.out.println(averages);
-
-//        Map<String, Double> result = students.parallelStream()
-//                .map(Student::getGrades)
-//                .reduce((a, b) -> {
-//                    if ()
-//                });
     }
 }
